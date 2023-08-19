@@ -13,3 +13,4 @@ public class programmers_순서쌍의개수 {
         System.out.println(answer);
     }
 }
+ 
