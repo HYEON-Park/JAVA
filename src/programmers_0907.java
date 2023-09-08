@@ -7,17 +7,16 @@ public class programmers_0907 {
         String[] answer = new String[cnt];
 
         for (int i = 0; i < cnt; i++) {
-            int start = n * i;
-            // System.out.println(start);
-            int end = 0;
-            if (start + n >= my_str.length()) {
-                System.out.println(start + n);
-                end = my_str.length();
-                System.out.println(end);
+            int s = n * i;
+            int e = 0;
+            if (s + n >= my_str.length()) {
+                System.out.println(s + n);
+                e = my_str.length();
+                System.out.println(e);
             } else {
-                end = start + n;
+                e = s + n;
             }
-            answer[i] = my_str.substring(start, end);
+            answer[i] = my_str.substring(s, e);
         }
 
         System.out.println(answer[0].toString());
