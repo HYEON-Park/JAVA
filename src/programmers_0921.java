@@ -14,11 +14,7 @@ public class programmers_0921 {
                 } else if (str[j].equals("-")) {
                     sum -= Integer.parseInt(str[j + 1]);
                 } else if (str[j].equals("=")) {
-                    if (sum == Integer.parseInt(str[j + 1])) {
-                        answer[i] = "O";
-                    } else {
-                        answer[i] = "X";
-                    }
+                    answer[i] = (sum == Integer.parseInt(str[j + 1])) ? "O" : "X";
                 }
             }
         }
