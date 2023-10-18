@@ -6,8 +6,18 @@
 public class programmers_1017 {
 
     public static void main(String[] args) {
-        int chicken = 100;
-        int result = 0;
+        int chicken = 1081;
 
+        int order = chicken / 10;
+        int coup = order / 10;
+        int coup_etc = (chicken % order);
+
+        if (coup >= 10) {
+            coup += coup / 10;
+        }
+
+        // System.out.println(order + coup + coup_etc);
+        int result = order + coup + coup_etc;
+        // return result;
     }
 }
