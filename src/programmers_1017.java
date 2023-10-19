@@ -12,7 +12,7 @@ public class programmers_1017 {
         int coup = order / 10;
         int coup_etc = (chicken % order);
 
-        if (coup >= 10) {
+        while (coup >= 10) {
             coup += coup / 10;
         }
 
