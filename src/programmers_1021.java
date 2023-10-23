@@ -3,13 +3,29 @@ public class programmers_1021 {
         /**
          * 다항식 더하기
          */
-        String polynomial = "3x + 7 + x";
+        String polynomial = "12x + 13";
+        polynomial = polynomial.replaceAll(" ", "");
+        String[] arr = polynomial.split("");
 
-        polynomial = polynomial.trim();
-        String[] arr = polynomial.split(polynomial);
-
+        int x = 0;
+        String answer = "";
         for (int i = 0; i < arr.length; i++) {
-            System.out.println();
+            if (arr[i].contains("x")) {
+                x += 1;
+
+            } else if (Character.isDigit(arr[i].charAt(0)) == true) {
+                if (arr[i + 1] != null && arr[i + 1].contains("x")) {
+                    x += Integer.parseInt(arr[i]);
+                } else if (arr[i + 1] != null && !arr[i + 1].contains("x")) {
+                    answer += " + " + arr[i];
+                }
+                i += 1;
+            }
+
         }
+
+        String result = String.valueOf(x) + "x" + answer;
+        System.out.println(result);
+
     }
 }
