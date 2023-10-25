@@ -3,7 +3,8 @@ public class programmers_1021 {
         /**
          * 다항식 더하기
          */
-        String polynomial = "12x + 13";
+        String polynomial = "7x + 4 + 9 + 5x";
+        // String polynomial = "x + x + x";
         polynomial = polynomial.replaceAll(" ", "");
         String[] arr = polynomial.split("");
 
